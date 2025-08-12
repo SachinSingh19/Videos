@@ -95,7 +95,7 @@ if check_password():
     st.header("1. Introduction")
     display_video(
         "Every day, we manage projects. (Done)",
-        "https://www.canva.com/design/DAGqb3TtBiA/aeKE3oOyH8D3sy6f-tW-UA/watch?utm_content=DAGqb3TtBiA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7a692b3c29
+        https://www.canva.com/design/DAGqb3TtBiA/aeKE3oOyH8D3sy6f-tW-UA/watch?utm_content=DAGqb3TtBiA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7a692b3c29
     )
     arrow()
 
