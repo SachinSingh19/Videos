@@ -52,7 +52,7 @@ def add_animated_background():
     )
 
 # Password protection (change password here)
-PASSWORD = "yourpassword"
+PASSWORD = "123"
 
 def check_password():
     if "password_correct" not in st.session_state:
