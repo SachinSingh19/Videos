@@ -19,9 +19,7 @@ def check_password():
         return True
 
 def display_video_section(title, video_url, key):
-    # Use Streamlit expander for toggle effect
     with st.expander(title, expanded=False):
-        # Embed Canva video iframe
         st.markdown(
             f"""
             <iframe src="{video_url}" width="700" height="400" frameborder="0" allowfullscreen></iframe>
@@ -30,7 +28,6 @@ def display_video_section(title, video_url, key):
         )
 
 def arrow():
-    # Simple arrow icon between sections
     st.markdown(
         """
         <div style="text-align:center; font-size: 2em; margin: 10px 0;">⬇️</div>
@@ -39,35 +36,24 @@ def arrow():
     )
 
 if check_password():
-    st.title("Project Espresso: Insights from the Top Team")
+    st.title("Project Espresso: Coffee & Project Traps: Brewing Success Together")
 
-    # Example data: Replace with your actual Canva embed URLs
-    videos = [
-        {
-            "title": "Introduction: Every day, we manage projects.",
-            "url": "https://www.canva.com/design/your_canva_video_embed_link_1",
-        },
-        {
-            "title": "1st Series: Coffee & Project Traps: Brewing Success Together",
-            "url": "https://www.canva.com/design/your_canva_video_embed_link_2",
-        },
-        {
-            "title": "2nd Series: Café Success: 5 Essential Tips for Project Mastery",
-            "url": "https://www.canva.com/design/your_canva_video_embed_link_3",
-        },
-        {
-            "title": "3rd Series: Coffee Break Case Studies: Real Projects, Real Lessons",
-            "url": "https://www.canva.com/design/your_canva_video_embed_link_4",
-        },
-        {
-            "title": "4th Series: Coffee Break Roadmap: Navigating Your Project to Success",
-            "url": "https://www.canva.com/design/your_canva_video_embed_link_5",
-        },
+    traps = [
+        ("🎯 Trap #1 – Goals as Foggy as a Rainy Morning (Done)", "https://www.canva.com/design/your_canva_video_embed_link_1"),
+        ("⏳ Trap #2 – The “Hope-for-the-Best” Plan (Done)", "https://www.canva.com/design/your_canva_video_embed_link_2"),
+        ("⚠️ Trap #3 – Playing Blind to Risks (Done)", "https://www.canva.com/design/your_canva_video_embed_link_3"),
+        ("🪣 Trap #4 – Big Plans, No Resources (Done)", "https://www.canva.com/design/your_canva_video_embed_link_4"),
+        ("❄️ Trap #5 – Scope Creep Avalanche (Done)", "https://www.canva.com/design/your_canva_video_embed_link_5"),
+        ("🧱 Trap #6 – Talking to Walls: Communication Fail (Done)", "https://www.canva.com/design/your_canva_video_embed_link_6"),
+        ("🤷‍♂️ Trap #7 – A Team Out of Sync (Done)", "https://www.canva.com/design/your_canva_video_embed_link_7"),
+        ("🧩 Trap #8 – Surprise! Technical Troubles", "https://www.canva.com/design/your_canva_video_embed_link_8"),
+        ("📉 Trap #9 – Skipping Checkpoints & Deliverables", "https://www.canva.com/design/your_canva_video_embed_link_9"),
+        ("🎂 Trap #10 – The Final Product Flop", "https://www.canva.com/design/your_canva_video_embed_link_10"),
     ]
 
-    for i, video in enumerate(videos):
-        display_video_section(video["title"], video["url"], key=f"video_{i}")
-        if i < len(videos) - 1:
+    for i, (title, url) in enumerate(traps):
+        display_video_section(title, url, key=f"trap_{i}")
+        if i < len(traps) - 1:
             arrow()
 
     st.markdown("---")
