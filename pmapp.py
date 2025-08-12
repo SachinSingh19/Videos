@@ -73,7 +73,7 @@ def display_video(title, video_url):
     with st.expander(title, expanded=False):
         st.markdown(
             f"""
-            <iframe src="{video_url}" width="700" height="400" frameborder="0" allowfullscreen></iframe>
+            <iframe src="{video_url}" width="700" height="400" frameborder="0" allowfullscreen allow="fullscreen"></iframe>
             """,
             unsafe_allow_html=True,
         )
@@ -91,16 +91,16 @@ if check_password():
     st.title("Project Espresso: Insights from the Top Team")
     st.markdown("---")
 
-    # 1. Introduction
-   st.header("1. Introduction")
-st.markdown(
-    """
-    <iframe src="https://www.canva.com/design/DAGqb3TtBiA/aeKE3oOyH8D3sy6f-tW-UA/embed" 
-    width="700" height="400" frameborder="0" allowfullscreen allow="fullscreen"></iframe>
-    """,
-    unsafe_allow_html=True,
-)
-arrow()
+    # 1. Introduction (Canva video embed)
+    st.header("1. Introduction")
+    st.markdown(
+        """
+        <iframe src="https://www.canva.com/design/DAGqb3TtBiA/aeKE3oOyH8D3sy6f-tW-UA/embed" 
+        width="700" height="400" frameborder="0" allowfullscreen allow="fullscreen"></iframe>
+        """,
+        unsafe_allow_html=True,
+    )
+    arrow()
 
     # 2. 1st Series: Coffee & Project Traps
     st.header("2. Video Series: 1st series: Coffee & Project Traps: Brewing Success Together")
@@ -118,49 +118,4 @@ arrow()
     ]
     for i, (title, url) in enumerate(traps):
         display_video(title, url)
-        if i < len(traps) - 1:
-            arrow()
-    arrow()
-
-    # 3. 2nd Series: Café Success
-    st.header('3. Video Series: 2nd series: "Café Success: 5 Essential Tips for Project Mastery"')
-    cafe_success_videos = [
-        ("Tip 1", "https://www.youtube.com/embed/CAFE_VIDEO_ID_1"),
-        ("Tip 2", "https://www.youtube.com/embed/CAFE_VIDEO_ID_2"),
-        ("Tip 3", "https://www.youtube.com/embed/CAFE_VIDEO_ID_3"),
-        ("Tip 4", "https://www.youtube.com/embed/CAFE_VIDEO_ID_4"),
-        ("Tip 5", "https://www.youtube.com/embed/CAFE_VIDEO_ID_5"),
-    ]
-    for i, (title, url) in enumerate(cafe_success_videos):
-        display_video(title, url)
-        if i < len(cafe_success_videos) - 1:
-            arrow()
-    arrow()
-
-    # 4. 3rd Series: Coffee Break Case Studies
-    st.header('4. Video Series: 3rd series: Coffee Break Case Studies: Real Projects, Real Lessons')
-    case_studies = [
-        ("Case Study 1", "https://www.youtube.com/embed/CASE_VIDEO_ID_1"),
-        ("Case Study 2", "https://www.youtube.com/embed/CASE_VIDEO_ID_2"),
-        ("Case Study 3", "https://www.youtube.com/embed/CASE_VIDEO_ID_3"),
-    ]
-    for i, (title, url) in enumerate(case_studies):
-        display_video(title, url)
-        if i < len(case_studies) - 1:
-            arrow()
-    arrow()
-
-    # 5. 4th Series: Coffee Break Roadmap
-    st.header('5. Video Series: 4th series: "Coffee Break Roadmap: Navigating Your Project to Success"')
-    roadmap_videos = [
-        ("Roadmap Part 1", "https://www.youtube.com/embed/ROADMAP_VIDEO_ID_1"),
-        ("Roadmap Part 2", "https://www.youtube.com/embed/ROADMAP_VIDEO_ID_2"),
-        ("Roadmap Part 3", "https://www.youtube.com/embed/ROADMAP_VIDEO_ID_3"),
-    ]
-    for i, (title, url) in enumerate(roadmap_videos):
-        display_video(title, url)
-        if i < len(roadmap_videos) - 1:
-            arrow()
-
-    st.markdown("---")
-    st.caption("© 2025 Your Company Name - Internal Use Only")
+        if i < len(traps)
