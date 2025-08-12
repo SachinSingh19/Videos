@@ -1,5 +1,56 @@
 import streamlit as st
 
+# Inject CSS for animated gradient background
+def add_animated_background():
+    st.markdown(
+        """
+        <style>
+        /* Full page animated gradient background */
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(-45deg, #6f4e37, #d2b48c, #8b5e3c, #f4f1ea);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #333;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Make Streamlit container background transparent */
+        .css-18e3th9 {
+            background: transparent !important;
+        }
+
+        /* Style headers and text for better contrast */
+        h1, h2, h3, .st-expanderHeader {
+            color: #3e2f1c !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Style expander content background */
+        .st-expander > div {
+            background-color: rgba(255, 255, 255, 0.85) !important;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        /* Style arrows */
+        .arrow {
+            text-align: center;
+            font-size: 2em;
+            margin: 10px 0;
+            color: #6f4e37;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Password protection (change password here)
 PASSWORD = "yourpassword"
 
@@ -29,11 +80,12 @@ def display_video(title, video_url):
 
 def arrow():
     st.markdown(
-        """
-        <div style="text-align:center; font-size: 2em; margin: 10px 0;">⬇️</div>
-        """,
+        '<div class="arrow">⬇️</div>',
         unsafe_allow_html=True,
     )
+
+# Main app
+add_animated_background()
 
 if check_password():
     st.title("Project Espresso: Insights from the Top Team")
